@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: apr-management-api
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=citizen_settings
+    username: postgres
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: alexandrafedorovaaw@gmail.com
+    password: srib fzwm mcdc hyig
+    properties:
+      mail:
+        debag: false
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
