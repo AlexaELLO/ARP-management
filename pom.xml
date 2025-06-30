@@ -17,13 +17,15 @@
 	<properties>
 		<java.version>17</java.version>
 		<postgresql.version>42.7.5</postgresql.version>
+		<zonky.version>2.1.0</zonky.version>
+		<zonky.test.version>2.5.1</zonky.test.version>
+		<mockito.version>5.18.0</mockito.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -38,6 +40,24 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.zonky.test</groupId>
+			<artifactId>embedded-postgres</artifactId>
+			<version>${zonky.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.zonky.test</groupId>
+			<artifactId>embedded-database-spring-test</artifactId>
+			<version>${zonky.test.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

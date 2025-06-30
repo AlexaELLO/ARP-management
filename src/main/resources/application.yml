@@ -4,7 +4,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     password: postgres
-    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=citizen_settings
+    url: jdbc:postgresql://localhost:5432/arp_management?currentSchema=arp
     username: postgres
   jpa:
     generate-ddl: false

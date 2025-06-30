@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: "jpa"
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog-master.yaml
+zonky:
+  test:
+    database:
+      provider: zonky
+      type: postgres
