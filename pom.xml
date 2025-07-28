@@ -20,6 +20,7 @@
 		<zonky.version>2.1.0</zonky.version>
 		<zonky.test.version>2.5.1</zonky.test.version>
 		<mockito.version>5.18.0</mockito.version>
+		<liquibase.version>4.29.1</liquibase.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,6 +60,11 @@
 			<version>${mockito.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>${liquibase.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -85,6 +91,18 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>${liquibase.version}</version>
+				<configuration>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<systemProperties>
+						<user.name>userLiq</user.name>
+					</systemProperties>
+					<logging>info</logging>
 				</configuration>
 			</plugin>
 		</plugins>
