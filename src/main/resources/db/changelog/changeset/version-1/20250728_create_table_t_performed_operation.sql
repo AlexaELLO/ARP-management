@@ -8,6 +8,7 @@ create table t_performed_operation
     operation_type_id uuid,
     created_date      timestamp,
     initiator_name    varchar(200),
+    operation_summ    numeric(12, 2),
     sys_created_date  timestamp default current_timestamp,
     sys_updated_date  timestamp,
     constraint t_performed_operation_id_pk primary key (id),
@@ -25,6 +26,7 @@ comment on column t_performed_operation.register_id is 'ID регистра';
 comment on column t_performed_operation.operation_type_id is 'ID типа операции';
 comment on column t_performed_operation.created_date is 'Дата создания операции';
 comment on column t_performed_operation.initiator_name is 'Наименование инициатора создания/изменения задолженности';
+comment on column t_performed_operation.operation_summ is 'Сумма исполняемой операции';
 comment on column t_performed_operation.sys_created_date is 'Дата создания записи';
 comment on column t_performed_operation.sys_updated_date is 'Дата изменения записи';
 --rollback drop table t_performed_operation;

@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_directory_d_status.sql
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_table_t_operation_type.sql
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_table_t_product_type.sql
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_table_t_product.sql
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_table_t_register.sql
+  - include:
+      file: db/changelog/changeset/version-1/20250728_create_table_t_performed_operation.sql
