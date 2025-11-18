@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Alexandra Fedorova:20250728_create_directory_d_status
+--changeset Alexandra Fedorova:001_create_directory_d_status
 create table d_status
 (
     id               uuid,
