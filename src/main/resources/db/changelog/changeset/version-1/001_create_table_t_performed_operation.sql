@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Alexandra Fedorova:20250728_create_table_t_performed_operation
+--changeset Alexandra Fedorova:001_create_table_t_performed_operation
 create table t_performed_operation
 (
     id                uuid,
