@@ -20,6 +20,7 @@ public class Product {
 
     @Id
     private UUID id;
+
     private UUID product_type_id;
     private String name;
     private BigDecimal balance;

@@ -2,6 +2,8 @@ package com.apr_management.apr_api.controller;
 
 import com.apr_management.apr_api.dto.ProductDto;
 import io.zonky.test.db.AutoConfigureEmbeddedDatabase;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,9 +24,10 @@ public class DebitDebtControllerTest {
     @Autowired
     DebitDebtController debitDebtController;
 
-    @Autowired
-    private MockMvc mockMvc;
+//    @Autowired
+//    private MockMvc mockMvc;
 
+    @Test
     void createDebitDebt_success() {
         // Given
         var productId = UUID.randomUUID();
@@ -33,10 +36,11 @@ public class DebitDebtControllerTest {
         var productDtoRequest = getProductDtoRequest(productId, beginDate, expirationDate);
 
         // When
-        debitDebtController.createDebitDebt(productDtoRequest);
+        var product = debitDebtController.createDebitDebt(productDtoRequest);
 
         //Then
-
+        Assert.assertNotNull(product.getId());
+        Assert.assertEquals(product.getId(), productDtoRequest.getId());
 
     }
 

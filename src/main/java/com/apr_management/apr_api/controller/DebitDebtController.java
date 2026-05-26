@@ -8,5 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/debitDebt")
 public interface DebitDebtController {
 
-    ProductDto createDebitDebt(ProductDto productDto);
+    ProductDto createDebitDebt(ProductDto
+                                       productDto);
 }

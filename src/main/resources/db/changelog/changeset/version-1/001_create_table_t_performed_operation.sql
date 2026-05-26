@@ -6,6 +6,7 @@ create table t_performed_operation
     product_id        uuid,
     register_id       uuid,
     operation_type_id uuid,
+    status_id         uuid,
     created_date      timestamp,
     initiator_name    varchar(200),
     operation_summ    numeric(12, 2),
@@ -17,13 +18,16 @@ create table t_performed_operation
     constraint t_performed_operation_register_fk foreign key (register_id)
         references t_register (id),
     constraint t_performed_operation_type_fk foreign key (operation_type_id)
-        references t_operation_type (id)
+        references t_operation_type (id),
+    constraint t_performed_operation_status_fk foreign key (status_id)
+        references d_status (id)
 );
 comment on table t_performed_operation is 'Таблица исполняемых операций';
 comment on column t_performed_operation.id is 'ID операции';
 comment on column t_performed_operation.product_id is 'ID продукта';
 comment on column t_performed_operation.register_id is 'ID регистра';
 comment on column t_performed_operation.operation_type_id is 'ID типа операции';
+comment on column t_performed_operation.status_id is 'ID статуса';
 comment on column t_performed_operation.created_date is 'Дата создания операции';
 comment on column t_performed_operation.initiator_name is 'Наименование инициатора создания/изменения задолженности';
 comment on column t_performed_operation.operation_summ is 'Сумма исполняемой операции';
