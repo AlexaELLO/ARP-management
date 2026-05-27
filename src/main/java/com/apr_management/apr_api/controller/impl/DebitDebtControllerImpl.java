@@ -6,7 +6,7 @@ import com.apr_management.apr_api.dto.ProductDto;
 public class DebitDebtControllerImpl implements DebitDebtController {
 
     @Override
-    public ProductDto createDebitDebt(ProductDto productDto) {
+    public ProductDto registerDebitDebt(ProductDto productDto) {
 
     }
 }

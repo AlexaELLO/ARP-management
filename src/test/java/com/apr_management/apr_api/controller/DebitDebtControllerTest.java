@@ -36,7 +36,7 @@ public class DebitDebtControllerTest {
         var productDtoRequest = getProductDtoRequest(productId, beginDate, expirationDate);
 
         // When
-        var product = debitDebtController.createDebitDebt(productDtoRequest);
+        var product = debitDebtController.registerDebitDebt(productDtoRequest);
 
         //Then
         Assert.assertNotNull(product.getId());

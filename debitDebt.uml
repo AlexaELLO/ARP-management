@@ -1,0 +1,22 @@
+@startuml
+participant User
+participant Participant [
+    =API
+    ----
+    ""SubTitle""
+]
+User -> Participant: Сохдание Дебиторской задолженности - \nс телом запроса
+
+Participant -> Controller: REST запрос \nPOST: /api/registerDebitDebt
+Controller -> UseCase: Вызов метода бизнес-логики\nна сохдание ДЗ
+UseCase -> Service: Вызов метода на создание ДЗ
+Service -> Repository: Вызов метода на\nсоздание задолженности в БД
+Repository -> Service: Возвращает ID созданного ДЗ
+Service -> UseCase: Получение ID созданного ДЗ
+UseCase -> Service: Вызов метода на\nсоздание Регистра ДЗ
+Service -> Repository: Вызов метода на\nсоздание Регистра в БД
+
+
+
+
+@enduml

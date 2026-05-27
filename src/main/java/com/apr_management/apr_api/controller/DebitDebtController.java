@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/debitDebt")
+@RequestMapping(value = "/api/debitDebt")
 public interface DebitDebtController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    ProductDto createDebitDebt(ProductDto productDto);
+    ProductDto registerDebitDebt(ProductDto productDto);
 }
